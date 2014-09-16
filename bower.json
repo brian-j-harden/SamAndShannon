@@ -1,0 +1,30 @@
+{
+  "name": "SamAndShannon",
+  "version": "0.0.1",
+  "homepage": "https://github.com/brian-j-harden/SamAndShannon",
+  "authors": [
+    "brian-j-harden <Brian.J.Harden@gmail.com>"
+  ],
+  "dependencies": {
+    "jquery": "jquery#1.10.2"
+  }
+  "description": "A gift of congratulations for Cam and Shannon on their engagement",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Sam",
+    "Shannon",
+    "engagement",
+    "wedding"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+
+}
