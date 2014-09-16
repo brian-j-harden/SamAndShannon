@@ -1,0 +1,17 @@
+{
+  "name": "SamAndShannon",
+  "version": "0.0.1",
+  "description": "A gift of congratulations for Cam and Shannon on their engagement",
+  "private": false,
+  "location": "git@github.com:personal/sam-and-shannon.git",
+  "authors": [
+    "Brian Harden <Brian.J.Harden@gmail.com>"
+  ],
+  "dependencies": {
+    "requirejs-text": "~2.0.10",
+    "requirejs": "requirejs#2.1.9",
+    "jquery": "jquery#1.10.2",
+    "backbone": "backbone#1.1.0",
+    "underscore": "underscore#1.6"
+  }
+}

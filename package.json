@@ -1,0 +1,11 @@
+{
+    "name": "SamAndShannon",
+    "version": "0.0.1",
+    "description": "A gift of congratulations for Cam and Shannon on their engagement",
+    "private": false,
+    "dependencies": {
+        "express": "4.9.0",
+        "hbs": "2.7.0",
+        "express-handlebars": "1.0.3"
+    }
+}
