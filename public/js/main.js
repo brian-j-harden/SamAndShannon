@@ -16,25 +16,32 @@ function changeBackgroundImages() {
 
 function img1Fade(){
 
-    $('#bImg1').fadeOut('slow', function(){$('#bImg1').css({background: 'url(' + imageSet1[++currentImageSet1] + ')'})});
+    $('#bImg1').fadeOut('slow', function(){$('#bImg1').css("background", "url(\"/img/" + imageSet1[++currentImageSet1] + "\") no-repeat")});
     $('#bImg2').fadeIn('slow');
+    console.log('img1 background: '+ $('#bImg1').css("background"));
+    console.log('currentImageSet1 is '+currentImageSet1);
+    console.log('image1 is '+imageSet1[currentImageSet1]);
     if (currentImageSet1 >= imageSet1.length - 1) {
 
         currentImageSet1 -= imageSet1.length;
+        console.log('reset currentImageSet1 to ' + currentImageSet1);
     };
 }
 
 function img2Fade(){
 
-    $('#bImg2').fadeOut('slow', function(){$('#bImg2').css({background: 'url(' + imageSet2[++currentImageSet2] + ')'})});
+    $('#bImg2').fadeOut('slow', function(){$('#bImg2').css("background", "url(\"/img/" + imageSet2[++currentImageSet2] + "\") no-repeat")});
     $('#bImg1').fadeIn('slow');
+    console.log('currentImageSet2 is '+currentImageSet2);
+    console.log('image2 is '+imageSet2[currentImageSet2]);
     if (currentImageSet2 >= imageSet2.length - 1) {
 
         currentImageSet2 -= imageSet2.length;
+        console.log('reset currentImageSet2 to ' + currentImageSet2);
     };
 }
 
 $(document).ready(function(){
 
-    setInterval(changeBackgroundImages, 5000);
+    setInterval(changeBackgroundImages, 4000);
 });

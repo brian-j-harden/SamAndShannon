@@ -1,32 +1,35 @@
 /**
  * Created by bharden on 9/11/14.
  */
+var http    = require( 'http' );
 var express     = require('express');
 var exphbs      = require('express-handlebars');
+var experrhndlr  = require('express-error-handler');
 var hbsConfig   = require( './config/hbs-config' );
 var hbs         = exphbs.create( hbsConfig );
 var app         = express();
 
-var server = app.listen(3000, function() {
-    console.log('Listening on port %d', server.address().port);
-});
+// getting main controller for routes
+var mainController = require( './controllers/main' );
+
+// adding custom middleweare
+var lessCompiler = require( 'express-less-middleware' )();
 
 // using express handlebars for templating
 app.engine( 'handlebars', hbs.engine );
 app.set('view engine', 'handlebars');
 app.set('views_old', './views_old/');
 
-// routing to templates
-app.get('/hello.txt', function(req, res){
-    res.send('Hello World');
-});
+app.use( express.static( 'public' ) );
 
-app.get('/', function (req, res) {
-    res.render('hello', { title: 'Hey', message: 'Hello there partner!'});
-})
+app.use( lessCompiler );
+app.use( experrhndlr( { dumpException: true, showStack: true } ) );
 
-// routing in the event of a 500 error
-app.use(function(err, req, res, next){
-    console.error(err.stack);
-    res.render('error500', { error_message: 'Something broke!'});
-});
+// configuring routes here. edit inside ./controllers/main.js to add routes
+mainController( app );
+
+http.createServer( app ).listen( 3000, function() {
+    console.log('Listening on port %d', 3000);
+} );
+
+exports.app = app;

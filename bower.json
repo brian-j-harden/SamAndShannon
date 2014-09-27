@@ -7,7 +7,7 @@
   ],
   "dependencies": {
     "jquery": "jquery#1.10.2"
-  }
+  },
   "description": "A gift of congratulations for Cam and Shannon on their engagement",
   "moduleType": [
     "node"
