@@ -20,17 +20,32 @@ function imgFade(divId1, divId2) {
         imageIndex = getRandomInteger(0, imageSet.length);
     }
 
-    console.log('Index: ' + imageIndex);
+    //Determine start and ending position for sliding image
+    startLeft = getRandomInteger(-50, 300);
+    endLeft = getRandomInteger(-50, 300);
+    startTop = getRandomInteger(-50, 300);
+    endTop = getRandomInteger(-50, 300);
+    growth = getRandomInteger(-75, 75);
+
+    console.log("growth: "+growth);
 
     // fade in the backup background
-    $(divId2).fadeIn(2500);
+    $(divId2).fadeIn({queue: false, duration: 3000});
+    $(divId2).animate({
+        left: endLeft,
+        top: endTop,
+        height:'+='+growth+'%',
+        width:'+='+growth+'%'
+    }, 4000);
 
     // fade out the existing background and change the image once the fadeout is complete, to get ready for the next time
     $(divId1).fadeOut(2500, function(){
         $(divId1).css("background", "url(\"/img/" + imageSet[imageIndex] + "\") no-repeat");
         $(divId1).css("background-size", "contain");
-//        background-size: contain;
-
+        $(divId1).css("top", startTop);
+        $(divId1).css("left", startLeft);
+        $(divId1).css("height", "100%");
+        $(divId1).css("width", "100%");
     });
 
 }
