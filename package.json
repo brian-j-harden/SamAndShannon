@@ -1,8 +1,20 @@
 {
     "name": "SamAndShannon",
     "version": "0.0.1",
-    "description": "A gift of congratulations for Cam and Shannon on their engagement",
+    "description": "A gift of congratulations for Sam and Shannon on their engagement",
     "private": false,
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com/brian-j-harden/SamAndShannon.git"
+    },
+    "author": "STLJ",
+    "contributors": [
+        "Brian Harden <brian.j.harden@gmail.com>"
+    ],
     "dependencies": {
         "config": "~0.4.33",
         "express": "4.9.0",
