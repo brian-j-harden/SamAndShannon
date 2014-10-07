@@ -28,8 +28,8 @@ app.use( experrhndlr( { dumpException: true, showStack: true } ) );
 // configuring routes here. edit inside ./controllers/main.js to add routes
 mainController( app );
 
-http.createServer( app ).listen( 80, function() {
-    console.log('Listening on port %d', 80);
+http.createServer( app ).listen( 5000, function() {
+    console.log('Listening on port %d', 5000);
 } );
 
 exports.app = app;
