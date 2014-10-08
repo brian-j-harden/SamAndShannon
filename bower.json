@@ -6,7 +6,7 @@
     "brian-j-harden <Brian.J.Harden@gmail.com>"
   ],
   "dependencies": {
-    "jquery": "jquery#1.10.2"
+    "jquery": "jquery#1.11.0"
   },
   "description": "A gift of congratulations for Cam and Shannon on their engagement",
   "moduleType": [
