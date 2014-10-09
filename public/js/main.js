@@ -1,10 +1,8 @@
 /**
  * Created by bharden on 9/26/14.
  */
-//var fs = require('fs');
 
-var imageSet = ["DSC_0157.gif", "DSC_0404-2.gif", "DSC_0447.gif", "DSC_0492-2.gif", "DSC_0539.gif", "DSC_0160.gif", "DSC_0404.gif", "DSC_0452.gif", "DSC_0492.gif", "DSC_0568-2.gif", "DSC_0203.gif", "DSC_0423.gif", "DSC_0455.gif", "DSC_0501.gif", "DSC_0568.gif", "DSC_0204.gif", "DSC_0430.gif", "DSC_0466.gif", "DSC_0509-2.gif", "DSC_0572.gif", "DSC_0366-2.gif", "DSC_0434-2.gif", "DSC_0479.gif", "DSC_0509.gif", "DSC_0577.gif", "DSC_0366.gif", "DSC_0434.gif", "DSC_0480.gif", "DSC_0530-2.gif", "DSC_0581.gif", "DSC_0373-2.gif", "DSC_0443-2.gif", "DSC_0486-2.gif", "DSC_0530.gif", "DSC_0588.gif", "DSC_0373.gif", "DSC_0443.gif", "DSC_0486.gif", "DSC_0536.gif", "DSC_0601.gif"];
-var imageIndex = -1;
+var imageSet;
 var fadeInDiv, fadeOutDiv;
 var divSet = ["#bImg1", "#bImg2", "#bImg3", "#bImg4"];
 var inDivIndex = 0;
@@ -29,17 +27,19 @@ function imgFade() {
     endLeft = getRandomInteger(-50, 1000);
     startTop = getRandomInteger(-50, 50);
     endTop = getRandomInteger(-50, 50);
-    growth = getRandomInteger(-75, 75);
+    startGrowth = getRandomInteger(-40, 40);
+    endGrowth = getRandomInteger(-40, 40);
 
-    console.log("growth: "+growth);
 
-    // fade in the backup background
+    // fade in the backup background, but first resize pic to starting size
+    $(fadeInDiv).css("height", '+='+startGrowth+'%');
+    $(fadeInDiv).css("width", '+='+startGrowth+'%');
     $(fadeInDiv).fadeIn({queue: false, duration: 2000});
     $(fadeInDiv).animate({
         left: endLeft,
         top: endTop,
-        height:'+='+growth+'%',
-        width:'+='+growth+'%'
+        height:'+='+endGrowth+'%',
+        width:'+='+endGrowth+'%'
     }, 2000);
 
     // fade out the existing background and change the image once the fadeout is complete, to get ready for the next time
@@ -62,6 +62,13 @@ function imgFade() {
             $(tmpDiv).css("z-index", i+2);
         }
     });
+}
+
+function populateImageSet(fileList)
+{
+    // Still need to remove .DS_Store and unnecessary files from the directory.  But otherwise, works great.
+    console.log('Passed files: '+fileList);
+    imageSet = fileList.split(",");;
 }
 
 $(document).ready(function(){
