@@ -44,7 +44,7 @@ function imgFade() {
 
     // fade out the existing background and change the image once the fadeout is complete, to get ready for the next time
     $(fadeOutDiv).fadeOut(2000, function(){
-        $(fadeOutDiv).css("background", "url(\"/img/" + imageSet[getRandomInteger(0, imageSet.length)] + "\") no-repeat");
+        $(fadeOutDiv).css("background", "url(\"/img/photos/" + imageSet[getRandomInteger(0, imageSet.length)] + "\") no-repeat");
         $(fadeOutDiv).css("background-size", "contain");
         $(fadeOutDiv).css("top", startTop);
         $(fadeOutDiv).css("left", startLeft);
