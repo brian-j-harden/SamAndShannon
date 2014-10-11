@@ -57,6 +57,29 @@
   background-size: contain;
 }
 
+#bTxt1 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background-size: contain;
+}
+
+#bTxt2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background-size: contain;
+}
+
+
 .container {
   width: 960px;
   height: 900px;
@@ -71,13 +94,57 @@
   display:none;
   margin: auto;
   width: 350px;
-  height: 200px;
-  background: rgba(255,255,255,.8);
+  height: 280px;
+  background: rgba(255,255,255,.7);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#wishes h1{
+  color:505050;
+  font-size:22px;
+  font-weight:normal;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+#wishes h2{
+  color:f0f0f0;
+  font-size:14px;
+  font-weight:normal;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+#wishes hr{
+  color:202020;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#wishes label{
+  color:202020;
+  font-size:14px;
+  font-weight:normal;
+}
+
+#wishes .textInput {
+  border-color: black;
+  border-width: 1px;
+}
+
+#wishes textarea {
+  border-color: black;
+  border-width: 1px;
 }
 
 #wishesToggle {
   z-index: 50;
-  border-style: none;
-  width: auto;
+  margin: auto;
+  width: 75px;
   text-align: center;
+  background: rgba(255,255,255,.7);
+  border-style: none;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
