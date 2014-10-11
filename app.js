@@ -6,6 +6,7 @@ var express     = require('express');
 var exphbs      = require('express-handlebars');
 var experrhndlr  = require('express-error-handler');
 var hbsConfig   = require( './config/hbs-config' );
+var bodyParser  = require('body-parser')
 var hbs         = exphbs.create( hbsConfig );
 var app         = express();
 
@@ -21,6 +22,10 @@ app.set('view engine', 'handlebars');
 app.set('views_old', './views_old/');
 
 app.use( express.static( 'public' ) );
+
+app.use( bodyParser.urlencoded({
+    extended: true
+}) );
 
 app.use( lessCompiler );
 app.use( experrhndlr( { dumpException: true, showStack: true } ) );

@@ -18,6 +18,7 @@
     "dependencies": {
         "config": "~0.4.33",
         "express": "4.9.0",
+        "body-parser": "1.9.0",
         "hbs": "2.7.0",
         "express-handlebars": "1.0.3",
         "underscore": "~1.5.2",

@@ -22,7 +22,13 @@ module.exports = function( server ) {
 
     server.get('/', function (req, res) {
         var files = fs.readdirSync('././public/img/photos/');
-//        console.log('Got files: '+files);
-        res.render('index', _.extend( defaultOptions, { title: 'index time', files: files }));
+        res.render('index', _.extend( defaultOptions, { title: 'Sam and Shannon', files: files }));
+    })
+
+    server.post('/saveMessage', function (req, res) {
+        var message = req.body.message;
+        var name = req.body.name;
+        console.log('CALLED SAVED SUCCESSFULLY WITH: '+message+"/"+name);
+        res.redirect('/');
     })
 };
