@@ -2,72 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f6bcd2-8079-4a92-ac1c-581514af7852" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0157.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0160.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0203.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0204.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0206.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0212.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0217-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0217.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0221.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0224.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0225-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0225.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0240.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0242.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0243-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0243.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0245.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0260.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0264.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0278.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0295.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0302-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0302.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0315-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0315.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0325.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0327.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0330.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0338.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0352.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0357.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0358-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0358.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0366-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0373-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0373.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0404-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0404.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0423.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0430.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0434-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0434.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0443-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0443.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0447.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0452.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0455.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0486-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0486.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0492-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0492.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0501.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0509-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0509.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0530-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0530.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0536.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0539.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0568-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0568.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0572.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0577.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0581.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0588.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DSC_0601.gif" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.less" afterPath="$PROJECT_DIR$/public/css/app.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.handlebars" afterPath="$PROJECT_DIR$/views/index.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.js" afterPath="$PROJECT_DIR$/controllers/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -106,8 +42,8 @@
       <file leaf-file-name="index.handlebars" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3" vertical-offset="0" max-vertical-offset="375">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="17" />
+            <state vertical-scroll-proportion="-3.3" vertical-offset="0" max-vertical-offset="840">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -116,8 +52,8 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.538462" vertical-offset="0" max-vertical-offset="1290">
-              <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1028" max-vertical-offset="1830">
+              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -136,8 +72,8 @@
       <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5979203" vertical-offset="0" max-vertical-offset="577">
-              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.6239168" vertical-offset="0" max-vertical-offset="577">
+              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -146,8 +82,8 @@
       <file leaf-file-name="app.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/app.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0" vertical-offset="580" max-vertical-offset="1335">
-              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+            <state vertical-scroll-proportion="-5.571429" vertical-offset="867" max-vertical-offset="2445">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -183,11 +119,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/views/index.handlebars" />
         <option value="$PROJECT_DIR$/views/layouts/master.handlebars" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/views/index.handlebars" />
         <option value="$PROJECT_DIR$/public/css/app.less" />
         <option value="$PROJECT_DIR$/controllers/index.js" />
-        <option value="$PROJECT_DIR$/public/js/main.js" />
       </list>
     </option>
   </component>
@@ -824,46 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="580" max-vertical-offset="1335">
-          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3" vertical-offset="0" max-vertical-offset="375">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/master.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.538462" vertical-offset="0" max-vertical-offset="1290">
-          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/jquery/src/effects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.05689001" vertical-offset="6825" max-vertical-offset="9810">
@@ -896,10 +792,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/layouts/master.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3" vertical-offset="0" max-vertical-offset="840">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.571429" vertical-offset="867" max-vertical-offset="2445">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1028" max-vertical-offset="1830">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5979203" vertical-offset="0" max-vertical-offset="577">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.6239168" vertical-offset="0" max-vertical-offset="577">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
           <folding />
         </state>
       </provider>

@@ -22,7 +22,7 @@ module.exports = function( server ) {
 
     server.get('/', function (req, res) {
         var files = fs.readdirSync('././public/img/photos/');
-        console.log('Got files: '+files);
+//        console.log('Got files: '+files);
         res.render('index', _.extend( defaultOptions, { title: 'index time', files: files }));
     })
 };
