@@ -3,6 +3,7 @@
 var config = require( 'config' );
 var _      = require( 'underscore' );
 var fs      = require( 'fs' );
+var pg      = require( 'pg' );
 
 var defaultOptions = {
 	title: 'Sam and Shannon',
@@ -28,7 +29,45 @@ module.exports = function( server ) {
     server.post('/saveMessage', function (req, res) {
         var message = req.body.message;
         var name = req.body.name;
-        console.log('CALLED SAVED SUCCESSFULLY WITH: '+message+"/"+name);
+        insertMessage(message, name);
         res.redirect('/');
     })
 };
+
+function getMessages() {
+    pg.connect("pg://rmfvwcxhwdcqrj:RoQl5sSBW5a_B0gR8DVNtBwTpM@ec2-54-243-51-102.compute-1.amazonaws.com:5432/dfuc1t0msd4kpv?ssl=true", function(err, client, done) {
+
+        client.query(
+            'select message, name from wishes',
+            function (err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log('row inserted.');
+                }
+
+                console.log('Client will end now!!!');
+                client.end();
+            });
+    });
+}
+
+function insertMessage(message, name) {
+
+    pg.connect("pg://rmfvwcxhwdcqrj:RoQl5sSBW5a_B0gR8DVNtBwTpM@ec2-54-243-51-102.compute-1.amazonaws.com:5432/dfuc1t0msd4kpv?ssl=true", function(err, client, done) {
+
+        client.query(
+            'INSERT INTO wishes (message, name) VALUES ($1, $2)',
+            [message, name],
+            function (err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log('row inserted.');
+                }
+
+                console.log('Client will end now!!!');
+                client.end();
+            });
+    });
+}
