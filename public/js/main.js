@@ -1,8 +1,7 @@
 /**
  * Created by bharden on 9/26/14.
  */
-
-var imageSet;
+var imageSet, wishSet;
 var fadeInDiv, fadeOutDiv;
 var imgDiv = ["#bImg1", "#bImg2", "#bImg3", "#bImg4"];
 var inDivIndex = 0;
@@ -86,6 +85,7 @@ function txtFade(divId1, divId2) {
 
     // fade out the existing background and change the image once the fadeout is complete, to get ready for the next time
     $(divId2).fadeOut(2000, function(){
+        $(divId2).html(wishSet[getRandomInteger(0, wishSet.length)]);
         $(divId2).css("background-size", "contain");
         $(divId2).css("top", startTop);
         $(divId2).css("left", startLeft);
@@ -96,6 +96,23 @@ function txtFade(divId1, divId2) {
 function populateImageSet(fileList)
 {
     imageSet = fileList.split(",");;
+}
+function populateWishes(savedWishes) {
+    console.log(savedWishes);
+    wishSet = [];
+    var obj = JSON.parse(savedWishes.replace(/&quot;/g,'"'));
+
+    // loop through the well wishes and add to the wishSet
+    for (var i = 0; i < obj.wishes.length; i++) {
+        wishSet[i] = obj.wishes[i].message+"<br> - "+obj.wishes[i].name;
+
+        console.log("wishSet["+i+"]: "+wishSet[i]);
+    }
+
+    // Set the first message to display (after the title) to be the new message
+    var firstMessage = wishSet[wishSet.length-1];
+    console.log("Displaying this first: "+firstMessage);
+    $('#bTxt1').html(firstMessage);
 }
 
 $(document).ready(function(){
