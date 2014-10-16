@@ -91,6 +91,11 @@ function txtFade(divId1, divId2) {
         $(divId2).css("left", startLeft);
 
     });
+
+    // if the intro is still displayed, then fade it out and don't display again
+    if ($('#introTxt1').css("display") == 'block') {
+        $('#introTxt1').fadeOut(2000);
+    }
 }
 
 function populateImageSet(fileList)
@@ -108,14 +113,16 @@ function populateWishes(savedWishes) {
 
         console.log("wishSet["+i+"]: "+wishSet[i]);
     }
-
-    // Set the first message to display (after the title) to be the new message
-    var firstMessage = wishSet[wishSet.length-1];
-    console.log("Displaying this first: "+firstMessage);
-    $('#bTxt1').html(firstMessage);
 }
 
 $(document).ready(function(){
+    // Display the last message that was entered first, followed by a random entry
+    var firstMessage = wishSet[wishSet.length-1];
+    console.log("Displaying this first: "+firstMessage);
+    $('#bTxt1').html(firstMessage);
+    $('#bTxt2').html(wishSet[getRandomInteger(0, wishSet.length)]);
+
+    // Start cycling through the images and text
     setInterval(function() {imgFade()}, 5000);
     setInterval(function() {changeText()}, 25000);
 

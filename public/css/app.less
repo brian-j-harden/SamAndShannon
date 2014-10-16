@@ -57,11 +57,35 @@
   background-size: contain;
 }
 
+@font-face {
+  font-family: arizonia;
+  src: url("/fonts/arizonia/Arizonia-Regular.ttf");
+}
+
+#introTxt1 {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-size: contain;
+  text-shadow: 2px 2px #202020;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+  border: single 6px black;
+  text-align: center;
+  font-family: arizonia;
+  background: rgba(255,255,255,.4);
+  box-shadow: 0px 0px 8px 8px #131313;
+}
+
+
 #bTxt1 {
   display: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 300;
+  left: 500;
   height: 100%;
   width: 650px;
   z-index: 10;
@@ -73,9 +97,10 @@
 }
 
 #bTxt2 {
+  display: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30;
+  left: 15;
   height: 100%;
   width: 650px;
   z-index: 10;
