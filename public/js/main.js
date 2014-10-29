@@ -10,6 +10,8 @@ var outDivIndex = 1;
 var txtDiv = ["#bTxt1", "#bTxt2"];
 var txtIndex = 0;
 
+var fontFamilies = ["alex-brush", "allura", "arizonia", "exo", "FFF-Tusj", "great-vibes", "oswald", "quicksand", "sansation"];
+
 function imgFade() {
     // Set the fade in and out divs
     fadeInDiv = imgDiv[inDivIndex++];
@@ -89,7 +91,7 @@ function txtFade(divId1, divId2) {
         $(divId2).css("background-size", "contain");
         $(divId2).css("top", startTop);
         $(divId2).css("left", startLeft);
-
+        $(divId2).css("font-family", fontFamilies[getRandomInteger(0, fontFamilies.length)]);
     });
 
     // if the intro is still displayed, then fade it out and don't display again
