@@ -10,7 +10,7 @@ var outDivIndex = 1;
 var txtDiv = ["#bTxt1", "#bTxt2"];
 var txtIndex = 0;
 
-var fontFamilies = ["alex-brush", "allura", "arizonia", "exo", "FFF-Tusj", "great-vibes", "oswald", "quicksand", "sansation"];
+var fontFamilies = ["alex-brush", "allura", "arizonia", "exo", "great-vibes", "oswald", "quicksand", "sansation"];
 
 function imgFade() {
     // Set the fade in and out divs
