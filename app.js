@@ -3,6 +3,7 @@
  */
 var http    = require( 'http' );
 var express     = require('express');
+var session = require('express-session');
 var exphbs      = require('express-handlebars');
 var experrhndlr  = require('express-error-handler');
 var hbsConfig   = require( './config/hbs-config' );
@@ -22,6 +23,10 @@ app.set('view engine', 'handlebars');
 app.set('views_old', './views_old/');
 
 app.use( express.static( 'public' ) );
+
+app.use(session({secret: 'engaged cuties',
+                    saveUninitialized: true,
+                    resave: true}));
 
 app.use( bodyParser.urlencoded({
     extended: true

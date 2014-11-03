@@ -4,7 +4,16 @@
     <div id="bImg3"></div>
     <div id="bImg4"></div>
 
-    <div id="introTxt1">Congratulation Sam and Shannon!  We love you and can't wait for your big day!</div>
+    <div id="introTxt1"></div>
+    <script>
+        if ( '1' == {{ submitted }} ) {
+            $('#introTxt1').html("Thank you for your well wishes for Sam and Shannon!");
+        }
+        else {
+            $('#introTxt1').html("Congratulation Sam and Shannon!  We love you and can't wait for your big day!");
+        }
+    </script>
+
     <div id="bTxt1"></div>
     <div id="bTxt2"></div>
 </div>

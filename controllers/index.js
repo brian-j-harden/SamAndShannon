@@ -23,8 +23,13 @@ module.exports = function( server ) {
 
     server.get('/', function (req, res) {
         var files = fs.readdirSync('././public/img/photos/');
+        var isSubmitted = req.session.isSubmitted;
+        if (typeof isSubmitted === "undefined") {
+            isSubmitted = 0;
+        }
+
         getMessages(function(wishesJson) {
-            res.render('index', _.extend( defaultOptions, { title: 'Sam and Shannon', files: files, savedWishes: wishesJson }));
+            res.render('index', _.extend( defaultOptions, { title: 'Sam and Shannon', files: files, savedWishes: wishesJson, submitted: isSubmitted }));
         });
 
     })
@@ -33,6 +38,7 @@ module.exports = function( server ) {
         var message = req.body.message;
         var name = req.body.name;
         insertMessage(message, name, function() {
+            req.session.isSubmitted = '1';
             res.redirect('/');
         });
     })

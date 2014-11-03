@@ -105,15 +105,12 @@ function populateImageSet(fileList)
     imageSet = fileList.split(",");;
 }
 function populateWishes(savedWishes) {
-    console.log(savedWishes);
     wishSet = [];
     var obj = JSON.parse(savedWishes.replace(/&quot;/g,'"'));
 
     // loop through the well wishes and add to the wishSet
     for (var i = 0; i < obj.wishes.length; i++) {
         wishSet[i] = obj.wishes[i].message+"<br> - "+obj.wishes[i].name;
-
-        console.log("wishSet["+i+"]: "+wishSet[i]);
     }
 }
 
