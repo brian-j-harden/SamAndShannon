@@ -10,7 +10,9 @@ var outDivIndex = 1;
 var txtDiv = ["#bTxt1", "#bTxt2"];
 var txtIndex = 0;
 
-var fontFamilies = ["alex-brush", "allura", "arizonia", "exo", "great-vibes", "oswald", "quicksand", "sansation"];
+var fontFamilies = ["alex-brush", "allura", "arizonia", "exo", "great-vibes", "oswald", "quicksand", "sansation",
+    "yellowtail", "tangerine", "dancing-script-ot", "comfortaa", "candela", "calligraffiti", "sf-burlington-script",
+    "bentham", "aleo", "abril-fatface"];
 
 function imgFade() {
     // Set the fade in and out divs
@@ -86,12 +88,14 @@ function txtFade(divId1, divId2) {
     }, 5000);
 
     // fade out the existing background and change the image once the fadeout is complete, to get ready for the next time
+    nxtFont = fontFamilies[getRandomInteger(0, fontFamilies.length)];
+    console.log("Next font is: "+nxtFont);
     $(divId2).fadeOut(2000, function(){
         $(divId2).html(wishSet[getRandomInteger(0, wishSet.length)]);
         $(divId2).css("background-size", "contain");
         $(divId2).css("top", startTop);
         $(divId2).css("left", startLeft);
-        $(divId2).css("font-family", fontFamilies[getRandomInteger(0, fontFamilies.length)]);
+        $(divId2).css("font-family", nxtFont);
     });
 
     // if the intro is still displayed, then fade it out and don't display again
@@ -118,11 +122,12 @@ $(document).ready(function(){
     // Display the last message that was entered first, followed by a random entry
     var firstMessage = wishSet[wishSet.length-1];
     console.log("Displaying this first: "+firstMessage);
-    $('#bTxt1').html(firstMessage);
-    $('#bTxt2').html(wishSet[getRandomInteger(0, wishSet.length)]);
+    $('#bTxt2').html(firstMessage);
+    $('#bTxt1').html(wishSet[getRandomInteger(0, wishSet.length)]);
 
     // Start cycling through the images and text
     setInterval(function() {imgFade()}, 5000);
+    setTimeout(function(){txtFade('#bTxt2', '#bTxt1')}, 12500);
     setInterval(function() {changeText()}, 25000);
 
     // set effect from select menu value
