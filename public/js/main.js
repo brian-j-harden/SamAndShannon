@@ -158,4 +158,8 @@ $(document).ready(function(){
     // update the total chars for the message on all changes
     $( '#message' ).change(function() {changeTotalChars()});
     $( '#message' ).keyup(function() {changeTotalChars()});
+
+    $( '#button2').click(function() {
+        $('#messageChars').html('(0/200)');
+    });
 });
