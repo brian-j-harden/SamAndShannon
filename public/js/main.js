@@ -121,14 +121,14 @@ function changeTotalChars() {
     // Count how many characters in the textarea
     var totalChars = $('#message').val().length;
 
-    //If the total number is greater than 300, then remove the extra character
-    if (totalChars > 300) {
-        var modifiedMessage = $('#message').val().substring(0, 300);
+    //If the total number is greater than 200, then remove the extra character
+    if (totalChars > 200) {
+        var modifiedMessage = $('#message').val().substring(0, 200);
         $('#message').val(modifiedMessage);
-        totalChars = 300;
+        totalChars = 200;
     }
 
-    $('#messageChars').html('('+totalChars+'/300)');
+    $('#messageChars').html('('+totalChars+'/200)');
 }
 
 $(document).ready(function(){
