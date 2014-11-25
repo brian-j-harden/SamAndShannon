@@ -89,7 +89,6 @@ function txtFade(divId1, divId2) {
 
     // fade out the existing background and change the image once the fadeout is complete, to get ready for the next time
     nxtFont = fontFamilies[getRandomInteger(0, fontFamilies.length)];
-    console.log("Next font is: "+nxtFont);
     $(divId2).fadeOut(2000, function(){
         $(divId2).html(wishSet[getRandomInteger(0, wishSet.length)]);
         $(divId2).css("background-size", "contain");
@@ -118,10 +117,23 @@ function populateWishes(savedWishes) {
     }
 }
 
+function changeTotalChars() {
+    // Count how many characters in the textarea
+    var totalChars = $('#message').val().length;
+
+    //If the total number is greater than 300, then remove the extra character
+    if (totalChars > 300) {
+        var modifiedMessage = $('#message').val().substring(0, 300);
+        $('#message').val(modifiedMessage);
+        totalChars = 300;
+    }
+
+    $('#messageChars').html('('+totalChars+'/300)');
+}
+
 $(document).ready(function(){
     // Display the last message that was entered first, followed by a random entry
     var firstMessage = wishSet[wishSet.length-1];
-    console.log("Displaying this first: "+firstMessage);
     $('#bTxt2').html(firstMessage);
     $('#bTxt1').html(wishSet[getRandomInteger(0, wishSet.length)]);
 
@@ -142,4 +154,8 @@ $(document).ready(function(){
             }
         });
     });
+
+    // update the total chars for the message on all changes
+    $( '#message' ).change(function() {changeTotalChars()});
+    $( '#message' ).keyup(function() {changeTotalChars()});
 });
