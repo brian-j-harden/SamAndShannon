@@ -88,7 +88,7 @@ function getMessages(callback) {
 
 function insertMessage(message, name, callback) {
 
-    pg.connect("pg://rmfvwcxhwdcqrj:RoQl5sSBW5a_B0gR8DVNtBwTpM@ec2-54-243-51-102.compute-1.amazonaws.com:5432/dfuc1t0msd4kpv?ssl=true", function(err, client, done) {
+    pg.connect(process.env.DATABASE_URL || "pg://rmfvwcxhwdcqrj:RoQl5sSBW5a_B0gR8DVNtBwTpM@ec2-54-243-51-102.compute-1.amazonaws.com:5432/dfuc1t0msd4kpv?ssl=true", function(err, client, done) {
 
         client.query(
             'INSERT INTO wishes (message, name) VALUES ($1, $2)',
