@@ -155,6 +155,19 @@ $(document).ready(function(){
         });
     });
 
+    // Also open the toggle if someone mouses over it
+    $( "#wishesToggle" ).mouseover(function() {
+        // make the toggle switch a brighter white
+        $("#wishesToggle").css("background", "rgba(255,255,255,.9)");
+
+        if ($('#wishes').css("display") != 'block')
+        {
+            $("#wishes").slideToggle("slow", function() {});
+        }
+
+    });
+
+
     // update the total chars for the message on all changes
     $( '#message' ).change(function() {changeTotalChars()});
     $( '#message' ).keyup(function() {changeTotalChars()});
