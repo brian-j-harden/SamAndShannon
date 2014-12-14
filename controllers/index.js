@@ -52,7 +52,7 @@ function getMessages(callback) {
     pg.connect("pg://rmfvwcxhwdcqrj:RoQl5sSBW5a_B0gR8DVNtBwTpM@ec2-54-243-51-102.compute-1.amazonaws.com:5432/dfuc1t0msd4kpv?ssl=true", function(err, client, done) {
 
         var messageQuery = client.query(
-            'select message, name from wishes',
+            'select message, name from wishes order by date_created',
             function (err, result) {
                 if (err) {
                     console.log(err);
