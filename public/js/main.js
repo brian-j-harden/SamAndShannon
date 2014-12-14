@@ -109,10 +109,11 @@ function populateImageSet(fileList)
 }
 function populateWishes(savedWishes) {
     wishSet = [];
-    var obj = JSON.parse(savedWishes.replace(/&quot;/g,'"'));
+    var obj = JSON.parse(savedWishes.replace(/&quot;/g,'"').replace(/&lt;/g, "<").replace(/&gt;/g, ">"));
 
     // loop through the well wishes and add to the wishSet
     for (var i = 0; i < obj.wishes.length; i++) {
+        console.log("Message: "+obj.wishes[i].message);
         wishSet[i] = obj.wishes[i].message+"<br> - "+obj.wishes[i].name;
     }
 }
