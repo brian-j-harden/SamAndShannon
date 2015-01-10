@@ -56,8 +56,6 @@ function getMessages(callback) {
             function (err, result) {
                 if (err) {
                     console.log(err);
-                } else {
-                    console.log('retrieved wishes.');
                 }
                 client.end();
             });

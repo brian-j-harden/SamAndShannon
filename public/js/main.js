@@ -1,7 +1,7 @@
 /**
  * Created by bharden on 9/26/14.
  */
-var imageSet, wishSet;
+var imageSet, wishSet, wishSetindex;
 var fadeInDiv, fadeOutDiv;
 var imgDiv = ["#bImg1", "#bImg2", "#bImg3", "#bImg4"];
 var inDivIndex = 0;
@@ -10,9 +10,10 @@ var outDivIndex = 1;
 var txtDiv = ["#bTxt1", "#bTxt2"];
 var txtIndex = 0;
 
-var fontFamilies = ["alex-brush", "allura", "arizonia", "exo", "great-vibes", "oswald", "quicksand", "sansation",
-    "yellowtail", "tangerine", "dancing-script-ot", "comfortaa", "candela", "calligraffiti", "sf-burlington-script",
+var fontFamilies = ["exo", "oswald", "quicksand", "sansation",
+    "dancing-script-ot", "comfortaa", "candela", "calligraffiti",
     "bentham", "aleo", "abril-fatface"];
+var lastFont = "exo";
 
 function imgFade() {
     // Set the fade in and out divs
@@ -75,10 +76,10 @@ function changeText() {
 }
 function txtFade(divId1, divId2) {
     //Determine start and ending position for sliding image
-    startLeft = getRandomInteger(0, 1000);
-    endLeft = getRandomInteger(0, 1000);
-    startTop = getRandomInteger(0, 500);
-    endTop = getRandomInteger(0, 500);
+    startLeft = getRandomInteger(0, $( window ).width()-650);
+    endLeft = getRandomInteger(0, $( window ).width()-650);
+    startTop = getRandomInteger(0, $( window ).height()-500);
+    endTop = getRandomInteger(0, $( window ).height()-500);
 
     // fade in the backup background, but first resize pic to starting size
     $(divId1).fadeIn({queue: false, duration: 1500});
@@ -88,14 +89,30 @@ function txtFade(divId1, divId2) {
     }, 5000);
 
     // fade out the existing background and change the image once the fadeout is complete, to get ready for the next time
+    var nextMessage = wishSet[wishSetindex--];
+
+    // Get the next font.  If it's the same as the previous one, then try again.
     nxtFont = fontFamilies[getRandomInteger(0, fontFamilies.length)];
+    while (nxtFont == lastFont)
+    {
+//        console.log("fonts matched... "+nxtFont+", "+lastFont);
+        nxtFont = fontFamilies[getRandomInteger(0, fontFamilies.length)];
+    }
+    lastFont = nxtFont;
+//    console.log("Next font is "+nxtFont);
+
     $(divId2).fadeOut(2000, function(){
-        $(divId2).html(wishSet[getRandomInteger(0, wishSet.length)]);
+        $(divId2).html(nextMessage);
         $(divId2).css("background-size", "contain");
         $(divId2).css("top", startTop);
         $(divId2).css("left", startLeft);
         $(divId2).css("font-family", nxtFont);
     });
+
+    if (wishSetindex < 0)
+    {
+        wishSetindex = wishSet.length - 1;
+    }
 
     // if the intro is still displayed, then fade it out and don't display again
     if ($('#introTxt1').css("display") == 'block') {
@@ -132,10 +149,9 @@ function changeTotalChars() {
 }
 
 $(document).ready(function(){
-    // Display the last message that was entered first, followed by a random entry
-    var firstMessage = wishSet[wishSet.length-1];
-    $('#bTxt2').html(firstMessage);
-    $('#bTxt1').html(wishSet[getRandomInteger(0, wishSet.length)]);
+    // Display the last message that was entered, first
+    $('#bTxt2').html(wishSet[wishSet.length-1]);
+    wishSetindex = wishSet.length-(Math.min(2, wishSet.length));
 
     // Start cycling through the images and text
     setInterval(function() {imgFade()}, 5000);
